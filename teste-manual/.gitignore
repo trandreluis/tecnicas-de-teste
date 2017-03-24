@@ -1,1 +1,7 @@
+# Arquivos e pastas do eclipse
+
 /bin/
+
+.settings/
+.classpath
+.project
