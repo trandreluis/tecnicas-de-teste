@@ -12,11 +12,9 @@ public class TesteTriangulo {
 				return "equilatero";
 			}
 
-			else if (lado1 != lado2 && lado1 == lado3) {
-				return "isosceles";
-			}
-
-			else if (lado1 == lado2 && lado1 != lado3 || lado1 != lado2 && lado2 == lado3) {
+			else if (lado1 == lado2 && lado1 != lado3 || lado1 == lado3 && lado1 != lado2
+					|| lado2 == lado1 && lado2 != lado3 || lado2 == lado3 && lado2 != lado1
+					|| lado3 == lado1 && lado3 != lado2 || lado3 == lado2 && lado3 != lado1) {
 				return "isosceles";
 			}
 
@@ -41,7 +39,17 @@ public class TesteTriangulo {
 		System.out.println("Retorno obtido: " + classificaTriangulo(4, 4, 4));
 
 		// isosceles
-		System.out.println("Parametros: [12,8,12]");
+		System.out.println("Parametros: [8,8,12]");
+		System.out.println("Retorno esperado: isosceles");
+		System.out.println("Retorno obtido: " + classificaTriangulo(12, 8, 12));
+
+		// isosceles
+		System.out.println("Parametros: [8,12,8]");
+		System.out.println("Retorno esperado: isosceles");
+		System.out.println("Retorno obtido: " + classificaTriangulo(12, 8, 12));
+
+		// isosceles
+		System.out.println("Parametros: [12,12,8]");
 		System.out.println("Retorno esperado: isosceles");
 		System.out.println("Retorno obtido: " + classificaTriangulo(12, 8, 12));
 
@@ -57,32 +65,32 @@ public class TesteTriangulo {
 		System.out.println("Pressione:\n1 - Inserir dados manualmente\n2 - Executar casos  de testes cadastrados");
 
 		Scanner s = new Scanner(System.in);
-		
+
 		int opcao = s.nextInt();
-		
-		if(opcao == 1) {
-			
+
+		if (opcao == 1) {
+
 			System.out.println("Primeiro lado: ");
 			int lado1 = s.nextInt();
 			System.out.println("Segundo lado: ");
 			int lado2 = s.nextInt();
 			System.out.println("Terceiro lado: ");
 			int lado3 = s.nextInt();
-			
+
 			System.out.println("");
 			System.out.println("----- RESULTADO -----");
 			System.out.println("");
 			System.out.println(classificaTriangulo(lado1, lado2, lado3));
-			
+
 		}
-		
-		else if(opcao == 2) {
+
+		else if (opcao == 2) {
 			System.out.println("");
 			System.out.println("----- RESULTADO -----");
 			System.out.println("");
-			casosDeTeste();			
+			casosDeTeste();
 		}
-		
+
 		else {
 			System.out.println("Entrada invalida");
 		}
