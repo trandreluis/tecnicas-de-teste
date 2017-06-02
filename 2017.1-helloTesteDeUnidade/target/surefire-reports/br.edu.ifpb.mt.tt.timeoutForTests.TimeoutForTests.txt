@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: br.edu.ifpb.mt.tt.timeoutForTests.TimeoutForTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.011 s <<< FAILURE! - in br.edu.ifpb.mt.tt.timeoutForTests.TimeoutForTests
+otherTestWithTimeout(br.edu.ifpb.mt.tt.timeoutForTests.TimeoutForTests)  Time elapsed: 1.01 s  <<< ERROR!
+org.junit.runners.model.TestTimedOutException: test timed out after 1000 milliseconds
+	at br.edu.ifpb.mt.tt.timeoutForTests.TimeoutForTests.otherTestWithTimeout(TimeoutForTests.java:16)
+
